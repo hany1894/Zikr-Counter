@@ -5,16 +5,16 @@ import android.os.Bundle;
 import android.content.*;
 
 public class Splash extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 2000;
+    private static int SPLASH_TIME_OUT = 1000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
-        new Handler() .postDelayed(new Runnable(){
+        final Intent Intent = new Intent(Splash.this,SalavatShomar.class);
+        new Handler().postDelayed(new Runnable(){
             @Override
             public void run() {
-                Intent Intent = new Intent(Splash.this,SalavatShomar.class);
+
                 startActivity(Intent);
                 finish();
 

@@ -20,53 +20,13 @@ public class SalavatShomar extends AppCompatActivity {
     final int today =rightNow.get(Calendar.DAY_OF_WEEK);
     Boolean iszahra;
     int counter;
+
     @Override
-    //////Start of menu shit/////////////////////
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_menu, menu);
-        return true;
-    }
-    final Context con=getApplicationContext();
-
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.go_main:
-                 Toast tost = Toast.makeText(con,"شما در صفحه اصلی می باشید",Toast.LENGTH_SHORT);
-                tost.show();
-                ////go main
-                return true;
-            case R.id.go_book:
-
-                //////Adeeye
-                return true;
-            case R.id.help:
-                Intent navhelp = new Intent(SalavatShomar.this,help.class);
-                Toast tst = Toast.makeText(con,"راهنما",Toast.LENGTH_SHORT);
-                tst.show();
-                startActivity(navhelp);
-                /////help
-                return true;
-            case R.id.about:
-                /////about
-                return true;
-            case R.id.exit:
-                Toast byby = Toast.makeText(con,"در پناه حق",Toast.LENGTH_SHORT);
-                byby.show();
-                ////exit
-                finish();
-                System.exit(0);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-    //////End of menu shit/////////////////////
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_salavat_shomar);
         counter=0;
-
+        final Context con=getApplicationContext();
         final int toastshort=Toast.LENGTH_SHORT;
         final int toastlong=Toast.LENGTH_SHORT;
         final String archive34="شما قسمت اول را به پایان رساندید";
